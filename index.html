@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <!-- Add SEO or smth idk -->
+        <meta charset="utf-8">
+        <meta name="description" content="A website that allows you to easily make and share your stage plots">
+        <meta name="keywords" content="stage, plot, plotting, band, stage creation">
+        <meta name="author" content="Noah Harper">
+        <meta name="author" content="Jason Harper">
+
+        <!-- Create embed thingamajig -->
+        <meta property="og:title" content="Band Stage Plot" />
+        <meta property="og:description" content="A website that allows you to easily make and share your stage plots" />
+        <meta property="og:image" content="https://diymusician.cdbaby.com/wp-content/uploads/2011/07/Screen-shot-2011-07-15-at-1.08.32-PM2.png" />
+
+        <!-- Import favicon -->
+        <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="./Images/favicon.ico">
+
+        <!-- CSS imports -->
+        <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/items.css">
+
+        <!-- JS imports -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+
+        <!-- Set title -->
+        <title>Band Stage Plot</title>
+
+    </head>
+    <body>
+
+        <!-- Sidebar (images) --> <div class="sidenav">
+            <div id="drums">
+                <img src="./Images/drums.png" style="width: 175px; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 50px;">Drumset</h6></center>
+            </div>
+            <div id="e-guitar">
+                <img src="./Images/electric-guitar.png" style="width: auto; height: 140px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Electric Guitar</h6></center>
+            </div>
+            <div id="b-guitar">
+                <img src="./Images/bass-guitar.png" style="width: auto; height: 140px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Electric Guitar</h6></center>
+            </div>
+            <div id="mic-stand">
+                <img src="./Images/microphone-stand.png" style="width: auto; height: 140px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Microphone Stand</h6></center>
+            </div>
+            <div id="mic">
+                <img src="./Images/microphone.png" style="width: auto; height: 140px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 35px; white-space: nowrap;">Mic</h6></center>
+            </div>
+            <div id="g-amp">
+                <img src="./Images/guitar-amp.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Guitar Amp</h6></center>
+            </div>
+            <div id="b-amp">
+                <img src="./Images/bass-amp.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Bass Amp</h6></center>
+            </div>
+            <div id="p-board">
+                <img src="./Images/pedal-board.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Pedal Board</h6></center>
+            </div>
+            <div id="keyboard">
+                <img src="./Images/keyboard.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Keyboard</h6></center>
+            </div>
+            <div id="stage-monitor">
+                <img src="./Images/stage-monitor.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Stage Monitor</h6></center>
+            </div>
+            <div id="person">
+                <img src="./Images/person.png" style="width: auto; height: 115px; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Person</h6></center>
+            </div>
+        </div>
+ 
+        <!-- Page content --> <div class="main">
+            <!-- User title --> <h1 style="font-family: fantasy; z-index: 9999; text-align: center; position: relative; margin-top: 5px;" contenteditable="true">
+                Your title here
+            </h1>
+            
+            <!-- Stage front --> <h4 style="font-family: fantasy; z-index: 9999; text-align: center; position: relative; top: -20px;">
+                Stage Front
+            </h4>
+        </div>
+
+        <!-- JS scripts -->
+        <script src="./JS/draggable.js"></script>
+
+    </body>
+</html>

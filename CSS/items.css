@@ -1,0 +1,76 @@
+#drums {
+    position: relative;
+}
+#drums:hover {
+    cursor: pointer;
+}
+
+#e-guitar {
+    position: relative;
+}
+#e-guitar:hover {
+    cursor: pointer;
+}
+
+#b-guitar {
+    position: relative;
+}
+#b-guitar:hover {
+    cursor: pointer;
+}
+
+#mic-stand {
+    position: relative;
+}
+#mic-stand:hover {
+    cursor: pointer;
+}
+
+#mic {
+    position: relative;
+}
+#mic:hover {
+    cursor: pointer;
+}
+
+#g-amp {
+    position: relative;
+}
+#g-amp:hover {
+    cursor: pointer;
+}
+
+#b-amp {
+    position: relative;
+}
+#b-amp:hover {
+    cursor: pointer;
+}
+
+#p-board {
+    position: relative;
+}
+#p-board:hover {
+    cursor: pointer;
+}
+
+#keyboard {
+    position: relative;
+}
+#keyboard:hover {
+    cursor: pointer;
+}
+
+#stage-monitor {
+    position: relative;
+}
+#stage-monitor:hover {
+    cursor: pointer;
+}
+
+#person {
+    position: relative;
+}
+#person:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #09203f 0%, #06395f 100%);
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 16px;}
+}
+
+.main {
+    top: 0;
+    position: absolute;
+    left: 200px;
+    right: 0;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    background-color: #818181;
+}
