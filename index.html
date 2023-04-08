@@ -21,6 +21,7 @@
         <!-- CSS imports -->
         <link rel="stylesheet" href="./CSS/style.css">
         <link rel="stylesheet" href="./CSS/items.css">
+        <link rel="stylesheet" href="./CSS/modal.css">
 
         <!-- JS imports -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -32,7 +33,28 @@
     </head>
     <body>
 
+        <!-- Modal --> <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <center>
+                    <h1>
+                        Welcome to BandStagePlot!
+                    </h1>
+                    <h3>
+                        This is where you can create your stage plot by dragging and dropping the elements to your desired location.
+                        To get items onto the page, just click on whatever item you want in the side bar.
+                        To get rid of items, drag and drop them into the item bar.
+                        You can always come back to this page by clicking menu icon in the bottom left corner.
+                    </h3>
+                    <h2 style="color: red;">
+                        Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.
+                    </h2>
+                </center>
+            </div>
+        </div>
+
         <!-- Sidebar (images) --> <div class="sidenav">
+
             <div id="drums">
                 <img src="./Images/drums.png" style="width: 140px; height: auto; display: block; margin-left: auto; margin-right: auto;">
                 <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 50px;">Drumset</h6></center>
@@ -43,7 +65,7 @@
             </div>
             <div id="b-guitar">
                 <img src="./Images/bass-guitar.png" style="width: auto; height: 110px; display: block; margin-left: auto; margin-right: auto;">
-                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Electric Guitar</h6></center>
+                <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Bass Guitar</h6></center>
             </div>
             <div id="mic-stand">
                 <img src="./Images/microphone-stand.png" style="width: auto; height: 125px; display: block; margin-left: auto; margin-right: auto;">
@@ -78,19 +100,31 @@
                 <center><h6 style="font-family: fantasy; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 85px; white-space: nowrap;">Person</h6></center>
             </div>
         </div>
+
+        <!-- Menu at bottom of sidenav --> <div class="menu"> 
+            <img src="./Images/hamburger-menu.png" style="height: 100%; display: block; margin-left: auto; margin-right: auto;" id="open-modal-btn" onclick="$('.modal').fadeIn();">
+        </div>
  
         <!-- Page content --> <div class="main">
-            <!-- User title --> <h1 style="font-family: fantasy; z-index: 9999; text-align: center; position: relative; margin-top: 5px;" contenteditable="true">
-                Your title here
+            <!-- User title --> <h1 style="font-family: fantasy; z-index: 9999; text-align: center; position: relative; margin-top: 5px;" contenteditable="true" onfocus="if (this.innerText === 'Your title here...') { this.innerText = ''; }" onblur="if (this.innerText === '') { this.innerText = 'Your title here...'; }">
+                Your title here...
             </h1>
             
             <!-- Stage front --> <h4 style="font-family: fantasy; z-index: 9999; text-align: center; position: relative; top: -20px;">
                 Stage Front
             </h4>
+
         </div>
 
-        <!-- JS scripts -->
+        <!-- JS and stuff -->
         <script src="./JS/draggable.js"></script>
+        <script src="./JS/modal.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.modal').fadeIn();
+            });
+        </script>        
 
     </body>
 </html>
