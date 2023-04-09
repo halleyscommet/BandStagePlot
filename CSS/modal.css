@@ -18,7 +18,7 @@
   background-color: #fefefe;
   margin: 0 auto; /* center align horizontally */
   padding: 10px;
-  width: 50%; /* Could be more or less, depending on screen size */
+  width: 40%; /* Could be more or less, depending on screen size */
   height: auto;
   border-radius: 10px; /* Add rounded corners to the modal */
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

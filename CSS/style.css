@@ -21,7 +21,7 @@
     background-color: #888888;
     background-size: cover;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .menu img:hover {
