@@ -1,9 +1,23 @@
-#drums {
+#drums-1-tom {
+    position: relative;
+}
+#drums-1-tom:hover {
+    cursor: pointer;
+}
+
+#drums-3-tom {
+    position: relative;
+}
+#drums-3-tom:hover {
+    cursor: pointer;
+}
+
+/* #drums {
     position: relative;
 }
 #drums:hover {
     cursor: pointer;
-}
+} */
 
 #e-guitar {
     position: relative;

@@ -9,7 +9,7 @@
         <meta name="author" content="Noah Harper">
         <meta name="author" content="Jason Harper">
 
-        <!-- Create embed thingamajig -->
+        <!-- Cr eate embed thingamajig -->
         <meta property="og:title" content="Band Stage Plot" />
         <meta property="og:description" content="A website that allows you to easily make and share your stage plots" />
         <meta property="og:image" content="https://diymusician.cdbaby.com/wp-content/uploads/2011/07/Screen-shot-2011-07-15-at-1.08.32-PM2.png" />
@@ -22,10 +22,12 @@
         <link rel="stylesheet" href="./CSS/style.css">
         <link rel="stylesheet" href="./CSS/items.css">
         <link rel="stylesheet" href="./CSS/modal.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
         <!-- JS imports -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
         <!-- Set title -->
         <title>Band Stage Plot</title>
@@ -36,29 +38,58 @@
         <!-- Modal --> <div class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <center>
-                    <h1>
-                        Welcome to BandStagePlot!
-                    </h1>
-                    <h3>
-                        This is where you can create your stage plot by dragging and dropping the elements to your desired location.
-                        To get items onto the page, just click on whatever item you want in the side bar.
-                        To get rid of items, drag and drop them into the item bar.
-                        You can always come back to this page by clicking menu icon in the bottom left corner.
-                    </h3>
-                    <h2 style="color: red;">
-                        Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.
-                    </h2>
-                </center>
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">About</a></li>
+                        <li><a href="#tabs-2">Functions</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <center>
+                            <h1>
+                                Welcome to BandStagePlot!
+                            </h1>
+                            <h3>
+                                This is where you can create your stage plot by dragging and dropping the elements to your desired location.
+                                To get items onto the page, just click on whatever item you want in the side bar.
+                                To get rid of items, drag and drop them into the item bar.
+                                You can always come back to this page by clicking menu icon in the bottom left corner.
+                            </h3>
+                            <h2 style="color: red;">
+                                Attention mobile users! This website does not work on any touchscreen devices. Please move to a desktop workstation to use this website.
+                            </h2>
+                        </center>
+                    </div>
+                    <div id="tabs-2">
+                        <center>
+                            <h1>
+                                Functions
+                            </h1>
+                            <h3>
+                                <button onclick="navigator.clipboard.writeText('https://www.bandstageplot.com/'); alert('Link copied!')">Copy Site Link</button><br>
+                                <button onclick="capture()">Screenshot</button><br>
+                                <button onclick="toggleFullscreen()" id="fs-button">Fullscreen</button><br>
+                                <!-- <button onclick="exportAsJSON()">Export as JSON</button> -->
+                            </h3>
+                        </center>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Sidebar (images) --> <div class="sidenav">
 
-            <div id="drums">
-                <img src="./Images/drums.png" style="width: 140px; height: auto; display: block; margin-left: auto; margin-right: auto;">
+            <div id="drums-1-tom">
+                <img src="./Images/drums-1-tom.png" style="width: 140px; height: auto; display: block; margin-left: auto; margin-right: auto;">
                 <center><h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 50px;">Drumset</h6></center>
             </div>
+            <div id="drums-3-tom">
+                <img src="./Images/drums-3-tom.png" style="width: 195px; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 50px;">Drumset</h6></center>
+            </div>
+            <!-- <div id="drums">
+                <img src="./Images/drums.png" style="width: 140px; height: auto; display: block; margin-left: auto; margin-right: auto;">
+                <center><h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 50px;">Drumset</h6></center>
+            </div> -->
             <div id="e-guitar">
                 <img src="./Images/electric-guitar.png" style="width: auto; height: 100px; display: block; margin-left: auto; margin-right: auto;">
                 <center><h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center; position: relative; margin-top: -20px; background-color: white; color: black; width: 100px; white-space: nowrap;">Electric Guitar</h6></center>
@@ -111,7 +142,7 @@
             </h1>
             
             <!-- Stage front --> <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; z-index: 9999; text-align: center; position: relative; top: -20px;">
-                Stage Front
+                Front
             </h4>
 
         </div>
@@ -119,12 +150,10 @@
         <!-- JS and stuff -->
         <script src="./JS/draggable.js"></script>
         <script src="./JS/modal.js"></script>
-
-        <script>
-            $(document).ready(function() {
-                $('.modal').fadeIn();
-            });
-        </script>        
+        <script src="./JS/onstart.js"></script>   
+        <script src="./JS/screenshot.js"></script>
+        <script src="./JS/fs.js"></script>
+        <script src="./JS/json.js"></script>
 
     </body>
 </html>
