@@ -59,4 +59,4 @@ function importJSON () {
   reader.readAsText(file)
 }
 
-$('#import-button').on('click', importJSON);
+$('#import-button').on('click', importJSON)
