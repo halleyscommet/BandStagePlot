@@ -67,8 +67,11 @@
                             <h3>
                                 <button onclick="navigator.clipboard.writeText('https://www.bandstageplot.com/'); alert('Link copied!')">Copy Site Link</button><br>
                                 <button onclick="capture()">Screenshot</button><br>
-                                <button onclick="toggleFullscreen()" id="fs-button">Fullscreen</button><br>
-                                <!-- <button onclick="exportAsJSON()">Export as JSON</button> -->
+                                <button onclick="toggleFullscreen()" id="fs-button">Fullscreen</button><br><br>
+                                <form>
+                                    <h2 for="bg-image">Import a Background Image</h2>
+                                    <input type="file" id="bg-image" name="bg-image" accept="image/*" placeholder="Example: user_background.png">
+                                </form>
                             </h3>
                         </center>
                     </div>
@@ -154,6 +157,7 @@
         <script src="./JS/screenshot.js"></script>
         <script src="./JS/fs.js"></script>
         <script src="./JS/json.js"></script>
+        <script src="./JS/background.js"></script>
 
     </body>
 </html>
