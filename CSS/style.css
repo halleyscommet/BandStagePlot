@@ -50,4 +50,5 @@ input[type="reset"] {
     /* padding: 10px; */
     font-size: 8px;
     cursor: pointer;
+    border-radius: 5px;
 }
