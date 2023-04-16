@@ -12,4 +12,5 @@ function submitReview () {
   var emailLink = `mailto:bandstageplot@gmail.com?subject=BandStagePlot Review and Data&body=User found BandStagePlot by: ${howfound}.%0D%0AUser review: "${review}".`
   window.open(emailLink, '_blank')
   event.preventDefault()
+  document.getElementById('review').reset()
 }
