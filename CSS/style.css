@@ -43,3 +43,11 @@
     overflow-y: hidden;
     background-color: #c9c9c9;
 }
+
+input[type="reset"] {
+    /* background-color: #ddd; */
+    border: none;
+    /* padding: 10px; */
+    font-size: 8px;
+    cursor: pointer;
+}
