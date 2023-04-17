@@ -16,4 +16,4 @@ If you encounter any issues or have questions about using BandStagePlot, please 
 I welcome contributions from the community! If you would like to contribute to BandStagePlot, please submit a pull request or reach out to me at [bandstageplot@gmail.com](mailto:bandstageplot@gmail.com).
 
 ### Credits
-BandStagePlot was developed by Noah Harper, with contributions from [ChatGPT](https://chat.openai.com/chat) (ha ha) and [Jason Harper](https://www.jasonharperentertainment.com). Thank you to everybody I consulted to get this working as best as possible.
+BandStagePlot was developed by Noah Harper, with contributions from [ChatGPT](https://chat.openai.com/chat) (ha ha), [Jason Harper](https://www.jasonharperentertainment.com) and [32KZ](https://www.github.com/32KZ). Thank you to everybody I consulted to get this working as best as possible.
