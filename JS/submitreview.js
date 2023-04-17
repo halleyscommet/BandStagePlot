@@ -9,8 +9,9 @@ function submitReview () {
     }
   }
 
-  var emailLink = `mailto:bandstageplot@gmail.com?subject=BandStagePlot Review and Data&body=User found BandStagePlot by: ${howfound}.%0D%0AUser review: "${review}".`
-  window.open(emailLink, '_blank')
+  var emailLink = `mailto:bandstageplot@gmail.com?subject=BandStagePlot Review and Data&body=User found BandStagePlot by ${howfound}.%0D%0AUser review: "${review}".`
+  alert('This takes you to your mailing service and creates a premade email.\nFeel free to edit this!')
+  window.open(emailLink,'popUpWindow','height=500,width=400,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes')
   event.preventDefault()
   document.getElementById('review').reset()
 }
