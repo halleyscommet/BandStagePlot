@@ -88,3 +88,10 @@
 #person:hover {
     cursor: pointer;
 }
+
+#im {
+    position: relative;
+}
+#im:hover {
+    cursor: pointer;
+}

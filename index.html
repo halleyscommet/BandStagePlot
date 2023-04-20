@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="./CSS/style.css">
         <link rel="stylesheet" href="./CSS/items.css">
         <link rel="stylesheet" href="./CSS/modal.css">
+        <link rel="stylesheet" href="./CSS/dark.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
 
         <!-- JS imports -->
@@ -71,12 +72,19 @@
                             <h3>
                                 <button onclick="navigator.clipboard.writeText('https://www.bandstageplot.com/'); alert('Link copied!')">Copy Site Link</button><br>
                                 <button onclick="capture()">Screenshot</button><br>
-                                <button onclick="toggleFullscreen()" id="fs-button">Fullscreen</button><br><br>
+                                <button onclick="toggleFullscreen()" id="fs-button">Fullscreen</button><br>
+                                <button onclick="location.reload()">Reset</button><br><br>
                                 <form>
                                     <h2 for="bg-image">Import a Background Image</h2>
                                     <input type="file" id="bg-image" name="bg-image" accept="image/*" placeholder="Example: user_background.png">
                                 </form>
                             </h3>
+                
+                            <label class="switch">
+                                <input type="checkbox" onclick="darkMode()">
+                                <span class="slider round"></span>
+                                <h3 for="switch" style="font-size: 24px; position: relative; right: 225%; bottom: 130%; white-space: nowrap; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Dark Mode</h3>
+                            </label>
                         </center>
                     </div>
                     <!-- Review tab --><div id="tabs-3">
@@ -196,6 +204,7 @@
         <script src="./JS/json.js"></script>
         <script src="./JS/background.js"></script>
         <script src="./JS/submitreview.js"></script>
+        <script src="./JS/dark.js"></script>
 
     </body>
 </html>

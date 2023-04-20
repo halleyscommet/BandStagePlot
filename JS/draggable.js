@@ -1,6 +1,6 @@
 $(function() {
   // Make the elements draggable
-  $("#drums, #e-guitar, #b-guitar, #mic-stand, #mic, #g-amp, #b-amp, #p-board, #keyboard, #stage-monitor, #person, #drums-1-tom, #drums-3-tom")
+  $("#drums, #e-guitar, #b-guitar, #mic-stand, #mic, #g-amp, #b-amp, #p-board, #keyboard, #stage-monitor, #person, #drums-1-tom, #drums-3-tom, #im")
     .click(function(event) {
       // Clone the element on double click
       var $clone = $(this).clone();
@@ -17,7 +17,7 @@ $(function() {
 });
 
 $(".sidenav").droppable({
-  accept: "#drums, #e-guitar, #b-guitar, #mic-stand, #mic, #g-amp, #b-amp, #p-board, #keyboard, #stage-monitor, #person, #drums-1-tom, #drums-3-tom",
+  accept: "#drums, #e-guitar, #b-guitar, #mic-stand, #mic, #g-amp, #b-amp, #p-board, #keyboard, #stage-monitor, #person, #drums-1-tom, #drums-3-tom, #im",
   drop: function(event, ui) {
     ui.draggable.remove();
   }
